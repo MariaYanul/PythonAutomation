@@ -9,3 +9,4 @@ if __name__ == "__main__":
     print(animal.animal_type)
     print(animal.animal_name)
     print(animal.num_cage)
+
