@@ -1,4 +1,4 @@
-import  requests
+import requests
 import pprint
 
 pp = pprint.PrettyPrinter(depth=5)
@@ -9,7 +9,7 @@ respond_text = ''
 respond = requests.get(url)
 
 if respond.ok:
-    respond_text = respond.te6
+    respond_text = respond.text
 ls = []
 ls1 = respond_text.split('/&q;,&q;title&q;:&q;')
 for item in ls1[1::]:
