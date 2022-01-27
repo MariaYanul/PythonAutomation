@@ -4,7 +4,7 @@ from src.hw24.pages.dashboard_page import DashboardPage
 
 @pytest.fixture(scope="session")
 def driver() -> Chrome:
-    driver = Chrome("core/infrastructure/bin/chromedriver.exe")
+    driver = Chrome('D:/QA/PythonAutomation/src/hw24/core/infrastructure/bin/chromedriver.exe')
     driver.get("https://ua.sinoptik.ua/")
     driver.maximize_window()
     yield driver

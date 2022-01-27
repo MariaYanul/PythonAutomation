@@ -1,5 +1,5 @@
 from __future__ import annotations
-
+from time import sleep
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -21,8 +21,7 @@ class DashboardPage:
         search_button = self.__driver.find_element(By.XPATH, self.__search_button_locator)
         search_button.click()
 
-        search_result = self.__wait.until(
-            EC.visibility_of_element_located(self.__results_search_lviv_locator)
-        )
+        search_result = self.__driver.find_element(By.XPATH, self.__results_search_lviv_locator)
+        sleep(5)
 
-        return search_result
+        return DashboardPage(self.__driver)
